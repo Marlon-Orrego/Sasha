@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina Principal Jupiter</title>
+    <link rel="stylesheet" href="./css/menu.css">
+    <link rel="stylesheet" href="./css/estilos.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-storage.js"></script>
+    <link rel="stylesheet" href="plugins/sweetAlert2/sweetalert2.min.css">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="JAVASCRIPT/firebase.js"></script>
+    <script src="JAVASCRIPT/login.js"></script>
+    <script src="./JAVASCRIPT/menu.js"></script>
+    <script src="./JAVASCRIPT/app.js"></script>
+    <title>Sidebar 01</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/pulse/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="wrapper d-flex align-items-stretch">
+        <nav id="sidebar">
+            <br><br>
+            <center>
+                <img src="./IMG/logo2.png" width="150">
+            </center>
+            <div class="p-4 pt-5">
+                <ul class="list-unstyled components mb-5" id="menu">
+
+                </ul>
+
+
+
+            </div>
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content" class="p-4 p-md-5">
+            <div class="blockLine">
+                <img src="https://udemedellin.edu.co/wp-content/uploads/2021/02/logo_udemedellin2.png" width="150">
+                <img src="./IMG/logoIdeagora.PNG" width="150">
+            </div>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <button type="button" id="sidebarCollapse" class="btn btn-primary">
+                        <i class="fa fa-bars"></i>
+                        <span class="sr-only">Toggle Menu</span>
+                    </button>
+                    
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="./main.html">Proyectos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./espacios.html">Espacios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./eventos.html">Eventos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./articulos.html">Artículos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./servicios.html">Servicios</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </nav>
+
+            <div id="contenido">
+            
+                    <br><br>
+                 
+        
+                        <div class="col-md-6 divcenter">
+                            <div class="card">
+                                <div class="card-body">
+                                    <center>
+                                    <h3>Añadir articulo</h3>
+                                    <form>
+                                        <div class="form-gruop">
+                                            <img width="70%" id="image" width="300">
+                                            <br>
+                                            <hr>
+                                        </div>
+                                        <div class="form-group" id="box">
+                                            
+                                            <input type="text" id="nombreArticulo" class="form-control"
+                                                placeholder="Nombre del articulo" autofocus>
+                                        </div>
+        
+                                        <div class="form-group" id="box">
+                                            
+                                            <input type="text" id="informacionArticulo" class="form-control"
+                                                placeholder="Información del articulo">
+                                        </div>
+        
+                                        
+        
+                                        <div class="form-group">
+        
+                                            <h5>Foto del artículo</h5>
+                                            <input type="file" name="imagen" value="" id="photo" class="form-control"
+                                                accept="image/png, image/jpeg">
+                                            <button class="btn btn-secondary" onclick="uploadImage()">subir foto</button>
+        
+        
+                                        </div>
+                                        
+        
+        
+                                        <hr>
+                                        <div id="Sugerencias" class="form-gruop">
+        
+                                        </div>
+                                        <button onclick="RegistrarDatosArticulo()" class="btn btn-primary" id="btn-task-form">
+                                            Guardar
+                                        </button>
+        
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6" id="tasks-container">
+        
+                        </div>
+        
+                   
+                
+            </div>
+        </div>
+    </div>
+    <footer>
+        <center>
+            <img src="https://udemedellin.edu.co/wp-content/uploads/2021/02/logo_udemedellin2.png" width="150">
+        </center>
+    </footer>
+</body>
+
+<script src="plugins/sweetAlert2/sweetalert2.all.min.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/popper.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
+
+</html>
