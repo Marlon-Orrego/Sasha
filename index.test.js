@@ -1,4 +1,4 @@
-const ValidaEmail = require('./test.js')
+const ValidaEmail = require('./alltest.js')
 //1
 test('retorna true para input "user@gmail.com"', () => {
    expect(ValidaEmail.isValidarEmail('user@gmail.com')).toBe(true);
