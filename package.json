@@ -20,5 +20,8 @@
     "url": "https://github.com/Marlon-Orrego/Sasha/issues"
   },
   "homepage": "https://github.com/Marlon-Orrego/Sasha#readme",
+  "devDependencies": {
+    "cypress": "^10.9.0"
+  },
   "description": ""
 }
