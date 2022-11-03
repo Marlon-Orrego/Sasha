@@ -25,4 +25,4 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: doncorrupto/web:latest
+          tags: sasha/web:latest
