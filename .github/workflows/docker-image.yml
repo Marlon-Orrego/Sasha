@@ -2,7 +2,7 @@ name: Update Docker Image
 
 on:
   workflow_run:
-    workflows: [ "IC" ]
+    workflows: [ "Continous Integration" ]
     types: [ completed ]
     branches: [ master ]
 
