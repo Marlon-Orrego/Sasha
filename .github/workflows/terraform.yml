@@ -4,7 +4,7 @@ on:
   workflow_run:
     workflows: [ "Update Docker Image" ]
     types: [ completed ]
-    branches: [ master ]
+    branches: [ main ]
 
 jobs:
  lint:
