@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina Principal Jupiter</title>
+    <link rel="stylesheet" href="./css/menu.css">
+    <link rel="stylesheet" href="./css/estilos.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-storage.js"></script>
+    <link rel="stylesheet" href="plugins/sweetAlert2/sweetalert2.min.css">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="JAVASCRIPT/firebase.js"></script>
+    <script src="JAVASCRIPT/login.js"></script>
+    <script src="./JAVASCRIPT/menu.js"></script>
+    <script src="./JAVASCRIPT/app.js"></script>
+    <title>Sidebar 01</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/encuestas.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/pulse/bootstrap.min.css">
+</head>
+
+<body>
+    <div id="page">
+    <div class="wrapper d-flex align-items-stretch">
+        <nav id="sidebar">
+            <br><br>
+            <center>
+                <img src="./IMG/logo2.png" width="150">
+            </center>
+            <div class="p-4 pt-5">
+                <ul class="list-unstyled components mb-5" id="menu">
+
+                </ul>
+
+
+
+            </div>
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content" class="p-4 p-md-5">
+            <div class="blockLine">
+                <img src="https://udemedellin.edu.co/wp-content/uploads/2021/02/logo_udemedellin2.png" width="150">
+                <img src="./IMG/logoIdeagora.PNG" width="150">
+            </div>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <button type="button" id="sidebarCollapse" class="btn btn-primary">
+                        <i class="fa fa-bars"></i>
+                        <span class="sr-only">Toggle Menu</span>
+                    </button>
+                    
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="./main.html">Proyectos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="./espacios.html">Espacios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./eventos.html">Eventos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./articulos.html">Artículos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./servicios.html">Servicios</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </nav>
+
+            <div id="contenido">
+                
+                    <svg style="display: none">
+                        <symbol id="star" viewBox="0 0 1024 1024">
+                          <polygon points="512 0 627 354 999 354 698 572 813 926 512 708 211 926 326 572 25 354 397 354 512 0" />
+                        </symbol>
+                      </svg>
+                      
+                      <div id="modal">
+                        <div class="overlay ">
+                          <div class="feedback container--small align--center ">
+                            <h1 class="feedback__title">Ayudanos a Mejorar</h1>
+                            
+                            <p class="feedback__description">¡Por favor mediante la siguiente encuesta responde de acuerdo a tu experiencia utilizando nuestros servicios.!</p>
+                            <form class="feedback__form">
+                              <fieldset class="rating rating__food">
+                                <legend> ¿Te sientes en un ambiente agradable al hacer uso de nuestros servicios?</legend>
+                                <div class="flex-container">
+                                  <input type="radio" id="food-5" name="rating__food" value="5" >
+                                  <label for="food-5"><svg>
+                                      <title>Five Stars</title>
+                                      <use xlink:href="#star"></use>
+                                    </svg></label>
+                                  <input type="radio" id="food-4" name="rating__food" value="4" border=10px solid black>
+                                  <label for="food-4"><svg>
+                                      <title>Four Stars</title>
+                                      <use xlink:href="#star"></use>
+                                    </svg></label>
+                                  <input type="radio" id="food-3" name="rating__food" value="3">
+                                  <label for="food-3"><svg>
+                                      <title>Three Stars</title>
+                                      <use xlink:href="#star"></use>
+                                    </svg></label>
+                                  <input type="radio" id="food-2" name="rating__food" value="2">
+                                  <label for="food-2"><svg>
+                                      <title>Two Stars</title>
+                                      <use xlink:href="#star"></use>
+                                    </svg></label>
+                                  <input type="radio" id="food-1" name="rating__food" value="1">
+                                  <label for="food-1"><svg>
+                                      <title>One Star</title>
+                                      <use xlink:href="#star"></use>
+                                    </svg></label>
+                                </div>
+                              </fieldset>
+                      
+                              <fieldset class="rating rating__q2">
+                                <legend>¿Sientes que Jupiter permite relacionarte con nuevos espacios que antes no tenías acceso o conocimiento en la Universidad?</legend>
+                                <div class="flex-container">
+                                  <input type="radio" id="driver-5" name="rating__q2" value="5">
+                                  <label for="driver-5"><svg>
+                                      <title>Five Stars</title>
+                                      <use xlink:href="#star"></use>
+                                    </svg></label>
+                                  <input type="radio" id="driver-4" name="rating__q2" value="4">
+                                  <label for="driver-4"><svg>
+                                      <title>Four Stars</title>
+                                      <use xlink:href="#star"></use>
+                                    </svg></label>
+                                  <input type="radio" id="driver-3" name="rating__q2" value="3">
+                                  <label for="driver-3"><svg>
+                                      <title>Three Stars</title>
+                                      <use xlink:href="#star"></use>
+                                    </svg></label>
+                                  <input type="radio" id="driver-2" name="rating__q2" value="2">
+                                  <label for="driver-2"><svg>
+                                      <title>Two Stars</title>
+                                      <use xlink:href="#star"></use>
+                                    </svg></label>
+                                  <input type="radio" id="driver-1" name="rating__q2" value="1">
+                                  <label for="driver-1"><svg>
+                                      <title>One Star</title>
+                                      <use xlink:href="#star"></use>
+                                    </svg></label>
+                                </div>
+                              </fieldset>
+                      
+                              <fieldset class="rating rating__q3">
+                                <legend>¿Cómo calificas la experiencia de navegar en Jupiter?</legend>
+                                <div class="flex-container">
+                                  <input type="radio" id="experience-5" name="rating__q3" value="5">
+                                  <label for="experience-5"><svg>
+                                      <title>Five Stars</title>
+                                      <use xlink:href="#star"></use>
+                                    </svg></label>
+                                  <input type="radio" id="experience-4" name="rating__q3" value="4">
+                                  <label for="experience-4"><svg>
+                                      <title>Four Stars</title>
+                                      <use xlink:href="#star"></use>
+                                    </svg></label>
+                                  <input type="radio" id="experience-3" name="rating__q3" value="3">
+                                  <label for="experience-3"><svg>
+                                      <title>Three Stars</title>
+                                      <use xlink:href="#star"></use>
+                                    </svg></label>
+                                  <input type="radio" id="experience-2" name="rating__q3" value="2">
+                                  <label for="experience-2"><svg>
+                                      <title>Two Stars</title>
+                                      <use xlink:href="#star"></use>
+                                    </svg></label>
+                                  <input type="radio" id="experience-1" name="rating__q3" value="1">
+                                  <label for="experience-1"><svg>
+                                      <title>One Stars</title>
+                                      <use xlink:href="#star"></use>
+                                    </svg></label>
+                                </div>
+                              </fieldset>
+                            </form>
+                            <button onclick="sendFeedback()">Enviar Respuestas</button>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+           
+            
+        </div>
+    </div>
+    <footer>
+        <center>
+            <img src="https://udemedellin.edu.co/wp-content/uploads/2021/02/logo_udemedellin2.png" width="150">
+        </center>
+    </footer>
+</div>
+</body>
+
+<script src="plugins/sweetAlert2/sweetalert2.all.min.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/popper.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
+<script src="./JAVASCRIPT/vistas.js"></script>
+<script src="./JAVASCRIPT/respuestas_formulario.js"></script>
+</html>
