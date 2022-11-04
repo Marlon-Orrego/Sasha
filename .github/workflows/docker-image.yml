@@ -25,4 +25,4 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: sasha/web:latest
+          tags: marlonorrego/folderr:latest
